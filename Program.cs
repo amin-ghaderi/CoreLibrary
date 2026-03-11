@@ -1,5 +1,60 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+// Wednesday 2026-03-11 Determined Loop exercise No. 1
+
+int[] amount = [5506, 291, 500, 482, 963];
+int total = 0;
+for (int i = 0; i < amount.Length; i++)
+{
+    int before = total;
+    total = total + amount[i];
+    Console.WriteLine($"Step {i}: {before} + {amount[i]} = {total}");
+}
+Console.WriteLine($"Final total is {total}");   
+
+
+// Wednesday 2026-03-11 Determined Loop exercise No. 2
+
+Console.WriteLine("Enter some text:");
+string[] text = (Console.ReadLine() ??"").Split(" ");
+for (int i = 0; i < text.Length; i ++)
+if (i % 2 == 0)
+{
+    Console.Write($"{text[i].ToUpper()} ");
+}
+else
+{
+    Console.Write($"{text[i].ToLower()} ");
+}
+
+// Wednesday 2026-03-11 Determined Loop exercise No. 3
+
+Console.WriteLine("Enter some text:");
+string[] text = (Console.ReadLine() ??"").Split(" ");
+for (int i = 0; i < text.Length; i ++)
+if (text[i].Length >= 6)
+{
+    Console.Write($"{text[i]} (long word) ");
+}
+else
+{
+    Console.Write($"{text[i]} ");
+}
+
+// Wednesday 2026-03-11 Determined Loop exercise No. 4
+
+Console.WriteLine("Enter some text:");
+string[] text = (Console.ReadLine() ??"").Split(" ");
+for (int i = 0; i < text.Length; i ++)
+{
+    for (int j = 0; j < text[i].Length; j++)
+    {
+        Console.Write($"{text[i]} ");
+    }
+    Console.WriteLine();
+}
+
+/*
 // tuesday 2026-03-10 conditional flow exercise No. 1
 
 Console.WriteLine("Are you gluten free?");
