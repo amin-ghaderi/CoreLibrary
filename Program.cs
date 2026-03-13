@@ -1,6 +1,449 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+// ==========================================
+// COFFEE SHOP ORDER SYSTEM 2026-03-13
+// Multi Conditional Flow Exercise
+// ==========================================
+
+
+// ------------------------------------------
+// VARIABLES – HOLD ORDER DATA
+// ------------------------------------------
+
+string coffeeName = "";
+string size = "";
+string extra = "";
+
+double price = 0;
+
+
+// ------------------------------------------
+// STEP 1 – DISPLAY FULL COFFEE MENU
+// user sees sizes and prices immediately
+// ------------------------------------------
+
+// ===== CAFE TITLE =====
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("==============================================");
+Console.WriteLine("             AX ODCYC COFFEE BAR");
+Console.WriteLine("==============================================");
+Console.ResetColor();
+
+
+// ===== MENU HEADER =====
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("HOT BREWS                  250ml      350ml");
+Console.WriteLine("------------------------------------------------");
+Console.ResetColor();
+
+
+// ===== MENU ITEMS =====
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("a  ");
+Console.ResetColor();
+Console.WriteLine("Espresso                1.95");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("b  ");
+Console.ResetColor();
+Console.WriteLine("Double Espresso         2.85");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("c  ");
+Console.ResetColor();
+Console.WriteLine("Espresso Macchiato      2.25");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("d  ");
+Console.ResetColor();
+Console.WriteLine("Americano               2.50       3.00");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("e  ");
+Console.ResetColor();
+Console.WriteLine("Lungo                   2.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("f  ");
+Console.ResetColor();
+Console.WriteLine("Flat White              2.50       3.00");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("g  ");
+Console.ResetColor();
+Console.WriteLine("Cappuccino              2.50       3.00");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("h  ");
+Console.ResetColor();
+Console.WriteLine("Hot Chocolate           3.50       4.00");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("i  ");
+Console.ResetColor();
+Console.WriteLine("Mocha                   4.00       4.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("j  ");
+Console.ResetColor();
+Console.WriteLine("Latte Macchiato         3.00       3.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("k  ");
+Console.ResetColor();
+Console.WriteLine("Decaffeinated Espresso  2.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("l  ");
+Console.ResetColor();
+Console.WriteLine("Tea                     1.85");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("m  ");
+Console.ResetColor();
+Console.WriteLine("Herbal Tea              2.10");
+
+
+// ===== FOOTER =====
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("------------------------------------------------");
+Console.ResetColor();
+
+Console.WriteLine("Choose coffee (a-m):");
+
+string coffeeChoice = Console.ReadLine() ?? "";
+
+
+// ------------------------------------------
+// STEP 2 – HANDLE COFFEE TYPE
+// determine coffee name, base price
+// ask size if 350ml exists
+// ------------------------------------------
+
+switch (coffeeChoice)
+{
+    case "a":
+
+        coffeeName = "Espresso";
+        size = "250ml";
+        price = 1.95;
+
+        break;
+
+    case "b":
+
+        coffeeName = "Double Espresso";
+        size = "250ml";
+        price = 2.85;
+
+        break;
+
+    case "c":
+
+        coffeeName = "Espresso Macchiato";
+        size = "250ml";
+        price = 2.25;
+
+        break;
+
+    case "d":
+
+        coffeeName = "Americano";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        string sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 2.50;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 3.00;
+                break;
+        }
+
+        break;
+
+    case "e":
+
+        coffeeName = "Lungo";
+        size = "250ml";
+        price = 2.50;
+
+        break;
+
+    case "f":
+
+        coffeeName = "Flat White";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 2.50;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 3.00;
+                break;
+        }
+
+        break;
+
+    case "g":
+
+        coffeeName = "Cappuccino";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 2.50;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 3.00;
+                break;
+        }
+
+        break;
+
+    case "h":
+
+        coffeeName = "Hot Chocolate";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 3.50;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 4.00;
+                break;
+        }
+
+        break;
+
+    case "i":
+
+        coffeeName = "Mocha";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 4.00;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 4.50;
+                break;
+        }
+
+        break;
+
+    case "j":
+
+        coffeeName = "Latte Macchiato";
+
+        Console.WriteLine("Choose size: a 250ml | b 350ml");
+        sizeChoice = Console.ReadLine() ?? "";
+
+        switch (sizeChoice)
+        {
+            case "a":
+                size = "250ml";
+                price = 3.00;
+                break;
+
+            case "b":
+                size = "350ml";
+                price = 3.50;
+                break;
+        }
+
+        break;
+
+    case "k":
+
+        coffeeName = "Decaffeinated Espresso";
+        size = "250ml";
+        price = 2.50;
+
+        break;
+
+    case "l":
+
+        coffeeName = "Tea";
+        size = "250ml";
+        price = 1.85;
+
+        break;
+
+    case "m":
+
+        coffeeName = "Herbal Tea";
+        size = "250ml";
+        price = 2.10;
+
+        break;
+
+    default:
+
+        Console.WriteLine("Invalid coffee selection");
+
+        break;
+}
+
+
+// ------------------------------------------
+// STEP 3 – EXTRAS MENU
+// ------------------------------------------
+// ===== CAFE TITLE =====
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("==============================================");
+Console.WriteLine("             AX ODCYC COFFEE BAR");
+Console.WriteLine("==============================================");
+Console.ResetColor();
+
+
+// ===== EXTRAS HEADER =====
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("EXTRAS");
+Console.WriteLine("------------------------------------------------");
+Console.ResetColor();
+
+
+// ===== EXTRA ITEMS =====
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("a  ");
+Console.ResetColor();
+Console.WriteLine("Additional Syrup Topping           +1.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("b  ");
+Console.ResetColor();
+Console.WriteLine("Additional Cream                   +1.50");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("c  ");
+Console.ResetColor();
+Console.WriteLine("Soya / Almond / Lactose-Free Milk  +1.00");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("d  ");
+Console.ResetColor();
+Console.WriteLine("No extra");
+
+
+// ===== FOOTER =====
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("------------------------------------------------");
+Console.ResetColor();
+
+Console.WriteLine("Choose extra:");
+string extraChoice = Console.ReadLine() ?? "";
+
+
+// ------------------------------------------
+// STEP 4 – HANDLE EXTRA OPTION
+// ------------------------------------------
+
+switch (extraChoice)
+{
+    case "a":
+
+        extra = "Additional Syrup Topping";
+        price += 1.50;
+
+        break;
+
+    case "b":
+
+        extra = "Additional Cream";
+        price += 1.50;
+
+        break;
+
+    case "c":
+
+        extra = "Soya / Almond / Lactose-Free Milk";
+        price += 1.00;
+
+        break;
+
+    case "d":
+
+        extra = "No extra";
+
+        break;
+
+    default:
+
+        Console.WriteLine("Invalid extra option");
+
+        break;
+}
+
+
+// ------------------------------------------
+// STEP 5 – PRINT FINAL ORDER
+// ------------------------------------------
+Console.WriteLine("");
+
+Console.WriteLine("AX ODCYC COFFEE BAR");
+Console.WriteLine("--------------------------------");
+
+Console.WriteLine($"{coffeeName} {size}");
+Console.WriteLine($"{extra}");
+
+Console.WriteLine("--------------------------------");
+
+Console.WriteLine($"TOTAL   {price:F2}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 // 2026-03-12 Dice gambling game
 
 
@@ -130,7 +573,7 @@ while (lives > 0 && credits > 0)
      else
      {
       Console.WriteLine("You won!");
-     }*/
+     }
 
      Console.WriteLine();
      Console.WriteLine($"Lives: {lives}");
@@ -173,7 +616,7 @@ Console.WriteLine($"Final credits: {credits}");
 
 
 
-
+*/
 
 /*
 // Wednesday 2026-03-11 Determined Loop exercise No. 1
