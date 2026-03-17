@@ -1,5 +1,54 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+// 2026-03-17 class exercises on methods
+
+class Employee
+{
+    private decimal salary;
+
+    public Employee()
+    {
+        salary = 0;
+    }
+
+    public Employee(decimal salary)
+    {
+        this.salary = salary;
+    }
+
+    private int VacationDays()
+    {
+        return 5;
+    }
+
+    public decimal IncomeTax()
+    {
+        int vacationDays = VacationDays();
+        decimal tax = salary * 0.3m * (20 - vacationDays);
+        return tax;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Employee Amin = new Employee(20000);
+        Employee Tobias = new Employee(50000);
+
+        Console.WriteLine($"Amin: {Amin.IncomeTax()}");
+        Console.WriteLine($"Tobias: {Tobias.IncomeTax()}");
+
+        Console.ReadLine();
+    }
+}
+
+
+
+
+
+
 /*
 // ==========================================
 // Exercise: Methods
@@ -250,7 +299,7 @@ int GetLongestLength(string[] words)
     return maxLength;
 }
 
-*/
+
 // ==========================================
 // Course: C# Programming
 // Topic: Methods
