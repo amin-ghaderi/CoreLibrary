@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace MyFirstApp.Tests;
+namespace CoreLibrary.Tests;
 
 public class CalculatorTests
 {
