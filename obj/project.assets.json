@@ -956,11 +956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\public\\myapps\\myfirstapp\\MyFirstApp.csproj",
-      "projectName": "MyFirstApp",
-      "projectPath": "C:\\Users\\public\\myapps\\myfirstapp\\MyFirstApp.csproj",
+      "projectUniqueName": "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj",
+      "projectName": "CoreLibrary",
+      "projectPath": "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj",
       "packagesPath": "C:\\Users\\info\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\public\\myapps\\myfirstapp\\obj\\",
+      "outputPath": "C:\\Users\\public\\myapps\\corelibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\info\\AppData\\Roaming\\NuGet\\NuGet.Config"

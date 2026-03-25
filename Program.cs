@@ -3,12 +3,28 @@
 
 // 2026-03-25 Unit Testing Exercise
 
-
 public class Calculator
 {
     public int Add(int a, int b)
     {
         return a + b;
+    }
+}
+
+
+public class TextUtils
+{
+    public string GetFullName(string firstName, string lastName)
+    {
+        return firstName + " " + lastName;
+    }
+}
+
+public class AgeChecker
+{
+    public bool IsAdult(int age)
+    {
+        return age >= 18;
     }
 }
 
