@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj": {}
+    "C:\\Users\\Public\\Myapps\\CoreLibrary\\CoreLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj": {
+    "C:\\Users\\Public\\Myapps\\CoreLibrary\\CoreLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Public\\Myapps\\CoreLibrary\\CoreLibrary.csproj",
         "projectName": "CoreLibrary",
-        "projectPath": "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj",
+        "projectPath": "C:\\Users\\Public\\Myapps\\CoreLibrary\\CoreLibrary.csproj",
         "packagesPath": "C:\\Users\\info\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\public\\myapps\\corelibrary\\obj\\",
+        "outputPath": "C:\\Users\\Public\\Myapps\\CoreLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\info\\AppData\\Roaming\\NuGet\\NuGet.Config"

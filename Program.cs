@@ -1,6 +1,72 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text.Json;
 
 
+// 2026-04-08 LINQ exercises
+string concertData = File.ReadAllText("concert_data.json");
+List<Concert> concerts = JsonSerializer.Deserialize<List<Concert>>(concertData) ?? new List<Concert>();
+Console.WriteLine(concerts.Count);
+List<Concert> upcomingConcerts = concerts
+    .Where(c => c.Date > DateTime.Now)
+    .OrderBy(c => c.Date)
+    .ToList();
+Console.WriteLine(upcomingConcerts.Count);
+
+// Query 1: Upcoming concerts ordered by Date
+List<Concert> upcomingConcertsByDate = concerts
+    .Where(c => c.Date > DateTime.Now)
+    .OrderBy(c => c.Date)
+    .ToList();
+Console.WriteLine(upcomingConcertsByDate.Count);
+foreach (var c in upcomingConcertsByDate)
+{
+    Console.WriteLine($"Id: {c.Id}, Performer: {c.Performer}, Date: {c.Date}, BeginsAt: {c.BeginsAt}, Sales: {c.FullCapacitySales}");
+}
+
+// Query 2: ReducedVenue concerts
+List<Concert> reducedVenueConcerts = concerts
+    .Where(c => c.ReducedVenue)
+    .ToList();
+Console.WriteLine(reducedVenueConcerts.Count);
+foreach (var c in reducedVenueConcerts)
+{
+    Console.WriteLine($"Id: {c.Id}, Performer: {c.Performer}, Date: {c.Date}, BeginsAt: {c.BeginsAt}, Sales: {c.FullCapacitySales}");
+}
+
+// Query 3: Concerts during 2024
+List<Concert> concerts2024 = concerts
+    .Where(c => c.Date.Year == 2024)
+    .ToList();
+Console.WriteLine(concerts2024.Count);
+foreach (var c in concerts2024)
+{
+    Console.WriteLine($"Id: {c.Id}, Performer: {c.Performer}, Date: {c.Date}, BeginsAt: {c.BeginsAt}, Sales: {c.FullCapacitySales}");
+}
+
+// Query 4: Top 5 by FullCapacitySales
+List<Concert> topSalesConcerts = concerts
+    .OrderByDescending(c => c.FullCapacitySales)
+    .Take(5)
+    .ToList();
+Console.WriteLine(topSalesConcerts.Count);
+foreach (var c in topSalesConcerts)
+{
+    Console.WriteLine($"Id: {c.Id}, Performer: {c.Performer}, Date: {c.Date}, BeginsAt: {c.BeginsAt}, Sales: {c.FullCapacitySales}");
+}
+
+// Query 5: Concerts on Friday
+List<Concert> fridayConcerts = concerts
+    .Where(c => c.Date.DayOfWeek == DayOfWeek.Friday)
+    .ToList();
+Console.WriteLine(fridayConcerts.Count);
+foreach (var c in fridayConcerts)
+{
+    Console.WriteLine($"Id: {c.Id}, Performer: {c.Performer}, Date: {c.Date}, BeginsAt: {c.BeginsAt}, Sales: {c.FullCapacitySales}");
+}
+
+
+
+/*
 // 2026-03-25 Unit Testing Exercise
 
 public class Calculator
@@ -27,6 +93,7 @@ public class AgeChecker
         return age >= 18;
     }
 }
+*/
 
 
 

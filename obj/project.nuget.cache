@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LAKW9FVysqI=",
+  "dgSpecHash": "LLCHrOTrDRE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\public\\myapps\\corelibrary\\CoreLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Public\\Myapps\\CoreLibrary\\CoreLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\info\\.nuget\\packages\\microsoft.codecoverage\\18.3.0\\microsoft.codecoverage.18.3.0.nupkg.sha512",
     "C:\\Users\\info\\.nuget\\packages\\microsoft.net.test.sdk\\18.3.0\\microsoft.net.test.sdk.18.3.0.nupkg.sha512",

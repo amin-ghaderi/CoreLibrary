@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿/*
+
+using Xunit;
 
 namespace CoreLibrary.Tests;
 
@@ -41,3 +43,4 @@ public class AgeCheckerTests
         Assert.True(result);
     }
 }
+*/
